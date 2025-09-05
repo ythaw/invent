@@ -1,0 +1,80 @@
+
+/* Theme color: change these to update primary color */
+:root {
+    --bs-primary: #7a39fa; /* Primary brand color */
+    --bs-primary-rgb: 122, 57, 250;
+    --bs-link-color: #7a39fa;
+    --bs-link-hover-color: #7a39fa;
+}
+
+/* Ensure outline variant matches */
+.btn-outline-primary {
+    --bs-btn-color: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: var(--bs-primary);
+}
+.btn.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-primary);
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-disabled-bg: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
+}
+/* RADIO BUTTONS (btn-check + .btn-outline-primary) */
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary,
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background-color: #7a39fa !important;
+  border-color: #7a39fa !important;
+  color: #fff !important;
+}
+
+/* Optional: card and body background tweaks */
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #f8f9fa; /* fallback */
+    background-image: url('bg1.png'); /* change to your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.card {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: inherit;
+}
+
+/* Make native radios/checkboxes use your primary color */
+.form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.form-check-input:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 .25rem rgba(var(--bs-primary-rgb), .25);
+}
+
+/* Improve focus state for segmented toggle radios */
+.btn-check:focus + .btn-outline-primary {
+    border-color: var(--bs-primary);
+}
+
+/* Ensure plain <a> links use the themed link colors */
+a {
+    color: var(--bs-link-color);
+}
+a:hover, a:focus {
+    color: var(--bs-link-hover-color);
+}
